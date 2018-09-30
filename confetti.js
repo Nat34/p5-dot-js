@@ -3,11 +3,10 @@ new p5();
   var canvas;
 
   function setup () {
-    canvas = createCanvas(1800, 880);
-    canvas.position(350, 50);
+    canvas = createCanvas(400, 400);
+    canvas.position(150, 150);
     background(255);
     frameRate(25);
-    alert('may cause epilepsy!');
 }
 
   function draw() {
@@ -23,24 +22,10 @@ new p5();
       }
       
       fill(ranColor, ranColor2, ranColor3);
-      beginShape();
-      vertex(180,x+2);
-      vertex(207,x+1);
-      vertex(214,x+80);
-      vertex(407,x+30);
-      vertex(412,x+80);
-      vertex(219,x+19);
-      vertex(226,x+20);
-      endShape(CLOSE);
+
+      ellipse(mouseX, mouseY, 90, 90);
       
-      
-      
-      ellipse(mouseX, mouseY, 120, 120);
-      
-    if ( (frameCount > 60) && (frameCount < 80) ) {
-          ellipse(mouseX, mouseY, 200, 200);
-      } else if(frameCount == 140) {
-          //save(canvas, 'myCanvas.jpg');
+    if(frameCount == 200) {
         noLoop();
       }
   }
